@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da60d79f9866429aa10d6bbc0d0de4bc, type: 3}
+  m_Name: Default_Bow
+  m_EditorClassIdentifier: 
+  id: 7ca43261
+  icon: {fileID: 21300000, guid: 7b83b4284630f4648a5a836478c8d06f, type: 3}
+  itemName: Default Bow
+  opensAt: 0
+  price: 0
+  data:
+    isOwned: 1
+  defaultData:
+    isOwned: 1
+  bowPrefab: {fileID: 6689358703146981538, guid: f3e0b4a57ef7046d6913b439cec4a451,
+    type: 3}

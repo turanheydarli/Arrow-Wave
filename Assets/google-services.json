@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "297752570255",
+    "project_id": "arrows-wave",
+    "storage_bucket": "arrows-wave.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297752570255:android:22f7158fd5ecef166a83fa",
+        "android_client_info": {
+          "package_name": "com.KrakerStudio.ArrowsWave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297752570255-4jldbg1flkr6adn06r4ff56ignm7ball.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.KrakerStudio.ArrowsWave",
+            "certificate_hash": "dd711e9ba79c1c2ea9b7b595ecad2f31f04c2089"
+          }
+        },
+        {
+          "client_id": "297752570255-f7pvvdaucqi5ap9ls532moo1oktno9sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdHWmqfeOHOudas7DNft9bxi4P7naDrFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297752570255-f7pvvdaucqi5ap9ls532moo1oktno9sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
