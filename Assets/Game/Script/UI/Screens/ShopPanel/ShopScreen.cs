@@ -55,6 +55,7 @@ public class ShopScreen : UIBehaviour, Screen_0_Callback
         {
             CreateShopItem(bow);
         }
+        
     }
 
     private void ShowArrows()
