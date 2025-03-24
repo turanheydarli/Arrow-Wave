@@ -43,6 +43,7 @@ namespace OgurySdk
         public event InterstitialAdEventHandler OnAdNotLoaded;
         public event InterstitialAdEventHandler OnAdDisplayed;
         public event InterstitialAdEventHandler OnAdImpression;
+        public event InterstitialAdEventHandler OnAdClicked;
         public event InterstitialAdEventHandler OnAdClosed;
         public event InterstitialAdErrorEventHandler OnAdError;
 
@@ -72,9 +73,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotAvailable += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdNotAvailable != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotAvailable != null)
                     {
                         strong.OnAdNotAvailable.Invoke(strong);
                     }
@@ -82,9 +81,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdLoaded += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdLoaded != null)
                     {
                         strong.OnAdLoaded.Invoke(strong);
                     }
@@ -92,9 +89,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotLoaded += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdNotLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotLoaded != null)
                     {
                         strong.OnAdNotLoaded.Invoke(strong);
                     }
@@ -102,9 +97,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdDisplayed += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdDisplayed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdDisplayed != null)
                     {
                         strong.OnAdDisplayed.Invoke(strong);
                     }
@@ -112,19 +105,23 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdImpression += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdImpression != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdImpression != null)
                     {
                         strong.OnAdImpression.Invoke(strong);
+                    }
+                };
+                OguryCallbacks.Instance.OnAdClicked += instanceId =>
+                {
+                    OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClicked != null)
+                    {
+                        strong.OnAdClicked.Invoke(strong);
                     }
                 };
                 OguryCallbacks.Instance.OnAdClosed += instanceId =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdClosed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClosed != null)
                     {
                         strong.OnAdClosed.Invoke(strong);
                     }
@@ -132,9 +129,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdError += (instanceId, error) =>
                 {
                     OguryInterstitialAd strong = capturedWeakInterstitialAd.Target as OguryInterstitialAd;
-                    if (instanceId == capturedInstanceId 
-                        && strong != null
-                        && strong.OnAdError != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdError != null)
                     {
                         strong.OnAdError.Invoke(strong, error);
                     }

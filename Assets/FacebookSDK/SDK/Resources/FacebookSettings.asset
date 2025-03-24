@@ -16,9 +16,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 
+  - 1173117923860339
   appLabels:
-  - Arrows Wave
+  - 
   cookie: 1
   logging: 1
   status: 1

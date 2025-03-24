@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Super_Arrow
   m_EditorClassIdentifier: 
   id: 911ebbba
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a0a508b86df7441c699357c2af1722f3, type: 3}
   itemName: Super Arrow
   opensAt: 3
   price: 10
   data:
-    isOwned: 1
+    isOwned: 0
   defaultData:
-    isOwned: 1
-  arrowPrefab: {fileID: 8412196132138097813, guid: f41f8872464434e14ad370f7950fae95,
+    isOwned: 0
+  arrowPrefab: {fileID: 8412196132138097813, guid: 91658b4a119e9476a86e195e6865804c,
     type: 3}
-  playerArrowPrefab: {fileID: 5151866993529341174, guid: e29ca9f4be7327b4faee4e407c5c34cc,
+  playerArrowPrefab: {fileID: 5151866993529341174, guid: d6f2171f647164c3c988896b0c60a15c,
     type: 3}

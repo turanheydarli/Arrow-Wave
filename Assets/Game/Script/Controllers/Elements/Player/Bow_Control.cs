@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Game.Script.Inventory;
@@ -24,6 +25,8 @@ public class Bow_Control : MonoBehaviour
         }
     }
 
+    public Action OnBowArrowUpdated;
+    
     public List<Arrow> Active_Arrows = new List<Arrow>();
 
     private e_Bow_State State = e_Bow_State.Idle;
@@ -119,6 +122,8 @@ public class Bow_Control : MonoBehaviour
         if (!Active_Arrows.Contains(arrow))
         {
             Active_Arrows.Add(arrow);
+            
+            GDG.UI_Control.Update_All();
         }
     }
 
@@ -136,7 +141,10 @@ public class Bow_Control : MonoBehaviour
                     Set_State(e_Bow_State.Idle);
                 }
             }, 0.2f);
+            
         }
+        
+        GDG.UI_Control.Update_All();
     }
 
     // --------------

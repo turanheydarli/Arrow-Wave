@@ -12,10 +12,7 @@ namespace OgurySdk
 
 #if UNITY_IOS
         [DllImport("__Internal", CharSet = CharSet.Ansi)]
-        private static extern int ogury_start(string assetKey);
-
-        [DllImport("__Internal")]
-        private static extern int ogury_startAds();
+        private static extern int ogury_startWithAssetKey(string assetKey);
 
         [DllImport("__Internal")]
         private static extern string ogury_getSdkVersion();
@@ -29,11 +26,12 @@ namespace OgurySdk
             ogury.CallStatic("start", androidAssetKey);
             Debug.Log("Android SDK Version : " + SdkVersion);
 #elif UNITY_IOS
-            ogury_start(iosAssetKey);
+            ogury_startWithAssetKey(iosAssetKey);
             Debug.Log("iOS SDK Version : " + SdkVersion);
 #endif
         }
 
+        [Obsolete("StartAds is deprecated, please use Start(androidAssetKey, iosAssetKey) instead.")]
         public static void StartAds()
         {
 #if UNITY_EDITOR
@@ -41,7 +39,7 @@ namespace OgurySdk
 #elif UNITY_ANDROID
             // Noop
 #elif UNITY_IOS
-            ogury_startAds();
+           // Noop
 #endif
         }
 

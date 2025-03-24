@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.KrakerStudio.ArrowsWave" android:versionCode="1" android:versionName="1.0">
-  <application android:label="@string/app_name" android:icon="@drawable/app_icon" android:networkSecurityConfig="@xml/network_security_config">
+  <application android:label="@string/app_name" android:icon="@drawable/app_icon">
     <!-- The MessagingUnityPlayerActivity is a class that extends
          UnityPlayerActivity to work around a known issue when receiving
          notification data payloads in the background. -->
@@ -23,12 +23,11 @@
     <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
     <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
     <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
-    <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
-    <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
-    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb477848607196920" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb1173117923860339" />
+    <meta-data android:name="com.facebook.sdk.ClientToken" android:value="" />
     <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true" />
     <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true" />
-    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider477848607196920" android:exported="true" />
+    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider1173117923860339" android:exported="true" />
   </application>
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

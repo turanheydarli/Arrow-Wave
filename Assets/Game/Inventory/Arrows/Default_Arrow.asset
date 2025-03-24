@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default_Arrow
   m_EditorClassIdentifier: 
   id: 44e6e331
-  icon: {fileID: 21300000, guid: afdd9bf26afe042489556d169bd6ed6a, type: 3}
+  icon: {fileID: 21300000, guid: a0a508b86df7441c699357c2af1722f3, type: 3}
   itemName: Default Arrow
   opensAt: 0
   price: 0

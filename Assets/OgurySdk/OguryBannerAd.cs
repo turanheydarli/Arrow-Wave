@@ -74,9 +74,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotAvailable += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotAvailable != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotAvailable != null)
                     {
                         strong.OnAdNotAvailable.Invoke(strong);
                     }
@@ -84,9 +82,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdLoaded += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdLoaded != null)
                     {
                         strong.OnAdLoaded.Invoke(strong);
                     }
@@ -94,9 +90,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotLoaded += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotLoaded != null)
                     {
                         strong.OnAdNotLoaded.Invoke(strong);
                     }
@@ -104,9 +98,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdDisplayed += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdDisplayed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdDisplayed != null)
                     {
                         strong.OnAdDisplayed.Invoke(strong);
                     }
@@ -114,9 +106,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdImpression += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdImpression != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdImpression != null)
                     {
                         strong.OnAdImpression.Invoke(strong);
                     }
@@ -124,9 +114,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdClicked += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdClicked != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClicked != null)
                     {
                         strong.OnAdClicked.Invoke(strong);
                     }
@@ -134,9 +122,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdClosed += instanceId =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdClosed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClosed != null)
                     {
                         strong.OnAdClosed.Invoke(strong);
                     }
@@ -144,9 +130,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdError += (instanceId, error) =>
                 {
                     OguryBannerAd strong = capturedWeakBannerAd.Target as OguryBannerAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdError != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdError != null)
                     {
                         strong.OnAdError.Invoke(strong, error);
                     }

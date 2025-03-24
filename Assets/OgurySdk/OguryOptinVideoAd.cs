@@ -41,6 +41,7 @@ namespace OgurySdk
         public event OptinVideoAdEventHandler OnAdNotLoaded;
         public event OptinVideoAdEventHandler OnAdDisplayed;
         public event OptinVideoAdEventHandler OnAdImpression;
+        public event OptinVideoAdEventHandler OnAdClicked;
         public event OptinVideoAdRewardedEventHandler OnAdRewarded;
         public event OptinVideoAdEventHandler OnAdClosed;
         public event OptinVideoAdErrorEventHandler OnAdError;
@@ -74,9 +75,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotAvailable += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotAvailable != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotAvailable != null)
                     {
                         strong.OnAdNotAvailable.Invoke(strong);
                     }
@@ -84,9 +83,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdLoaded += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdLoaded != null)
                     {
                         strong.OnAdLoaded.Invoke(strong);
                     }
@@ -94,9 +91,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotLoaded += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotLoaded != null)
                     {
                         strong.OnAdNotLoaded.Invoke(strong);
                     }
@@ -104,9 +99,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdDisplayed += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdDisplayed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdDisplayed != null)
                     {
                         strong.OnAdDisplayed.Invoke(strong);
                     }
@@ -114,19 +107,23 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdImpression += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdImpression != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdImpression != null)
                     {
                         strong.OnAdImpression.Invoke(strong);
+                    }
+                };
+                OguryCallbacks.Instance.OnAdClicked += instanceId =>
+                {
+                    OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClicked != null)
+                    {
+                        strong.OnAdClicked.Invoke(strong);
                     }
                 };
                 OguryCallbacks.Instance.OnAdRewarded += (instanceId, rewardItem) =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdRewarded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdRewarded != null)
                     {
                         strong.OnAdRewarded.Invoke(strong, rewardItem);
                     }
@@ -134,9 +131,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdClosed += instanceId =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdClosed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClosed != null)
                     {
                         strong.OnAdClosed.Invoke(strong);
                     }
@@ -144,9 +139,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdError += (instanceId, error) =>
                 {
                     OguryOptinVideoAd strong = capturedWeakOptinVideoAd.Target as OguryOptinVideoAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdError != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdError != null)
                     {
                         strong.OnAdError.Invoke(strong, error);
                     }

@@ -61,6 +61,7 @@ namespace OgurySdk
         public event ThumbnailAdEventHandler OnAdNotLoaded;
         public event ThumbnailAdEventHandler OnAdDisplayed;
         public event ThumbnailAdEventHandler OnAdImpression;
+        public event ThumbnailAdEventHandler OnAdClicked;
         public event ThumbnailAdEventHandler OnAdClosed;
         public event ThumbnailAdErrorEventHandler OnAdError;
 
@@ -90,9 +91,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotAvailable += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotAvailable != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotAvailable != null)
                     {
                         strong.OnAdNotAvailable.Invoke(strong);
                     }
@@ -100,9 +99,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdLoaded += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdLoaded != null)
                     {
                         strong.OnAdLoaded.Invoke(strong);
                     }
@@ -110,9 +107,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdNotLoaded += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdNotLoaded != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdNotLoaded != null)
                     {
                         strong.OnAdNotLoaded.Invoke(strong);
                     }
@@ -120,9 +115,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdDisplayed += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdDisplayed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdDisplayed != null)
                     {
                         strong.OnAdDisplayed.Invoke(strong);
                     }
@@ -130,19 +123,23 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdImpression += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdImpression != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdImpression != null)
                     {
                         strong.OnAdImpression.Invoke(strong);
+                    }
+                };
+                OguryCallbacks.Instance.OnAdClicked += instanceId =>
+                {
+                    OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClicked != null)
+                    {
+                        strong.OnAdClicked.Invoke(strong);
                     }
                 };
                 OguryCallbacks.Instance.OnAdClosed += instanceId =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdClosed != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdClosed != null)
                     {
                         strong.OnAdClosed.Invoke(strong);
                     }
@@ -150,9 +147,7 @@ namespace OgurySdk
                 OguryCallbacks.Instance.OnAdError += (instanceId, error) =>
                 {
                     OguryThumbnailAd strong = capturedWeakThumbnailAd.Target as OguryThumbnailAd;
-                    if (instanceId == capturedInstanceId
-                        && strong != null
-                        && strong.OnAdError != null)
+                    if (instanceId == capturedInstanceId && strong != null && strong.OnAdError != null)
                     {
                         strong.OnAdError.Invoke(strong, error);
                     }

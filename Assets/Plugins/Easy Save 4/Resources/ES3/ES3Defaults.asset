@@ -30,16 +30,16 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp
-    - MyBox
     - Assembly-CSharp-firstpass
-    - MaxSdk.Scripts
-    - MoreMountains.NiceVibrations.Demos
-    - PPv2URPConverters
-    - MoreMountains.NiceVibrations.Editor
+    - MyBox
     - MoreMountains.NiceVibrations.Haptics
-    - MaxSdk.Scripts.IntegrationManager.Editor
+    - MoreMountains.NiceVibrations.Demos
+    - MaxSdk.Scripts
     - MoreMountains.NiceVibrations
+    - MaxSdk.Scripts.IntegrationManager.Editor
+    - PPv2URPConverters
     - MaxSdk.Scripts.Editor
+    - MoreMountains.NiceVibrations.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

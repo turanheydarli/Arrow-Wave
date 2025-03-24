@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 57ef84ba
   icon: {fileID: 21300000, guid: 7b83b4284630f4648a5a836478c8d06f, type: 3}
   itemName: Super Arrow
-  opensAt: 30
+  opensAt: 4
   price: 20
   data:
     isOwned: 0
@@ -23,3 +23,4 @@ MonoBehaviour:
     isOwned: 0
   bowPrefab: {fileID: 6689358703146981538, guid: e892429b9a9984d89a9d7cc0f5eac141,
     type: 3}
+  maxActiveArrows: 3

@@ -15,12 +15,14 @@ public class ShopControlButton : MonoBehaviour
 
     private void Awake()
     {
+        gameObject.SetActive(false);
         controlButton.onClick.AddListener(OnControlButtonClicked);
     }
 
     public void SetSelectedItem(InventoryItem item)
     {
         _selectedItem = item;
+        gameObject.SetActive(true);
         UpdateButtonLabel();
     }
 
@@ -63,6 +65,7 @@ public class ShopControlButton : MonoBehaviour
             }
             else
             {
+                
                 return;
             }
         }

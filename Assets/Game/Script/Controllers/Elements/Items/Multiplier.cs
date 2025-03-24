@@ -104,9 +104,9 @@ public class Multiplier : Damageable
 
             hit_arrow.Destroy_On_Multiplier_Hit();
         
-            int currentArrowCount = GDG.Player_Control.Bow_Control.Active_Arrows.Count;
+            int currentArrowCount = GDG.Player_Control.Bow_Control.Active_Arrows.Count - 1;
             int maxArrows = GDG.Player_Control.Bow_Control.MaxActiveArrows;
-            int availableSlots = maxArrows - currentArrowCount;
+            int availableSlots = Mathf.Max(0, maxArrows - currentArrowCount);
             
             if (availableSlots <= 0) {
                 transform.DOShakeScale(0.5f, 0.5f, 10, 90, false);
